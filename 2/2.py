@@ -24,3 +24,4 @@ for line in lines:
 
         if (pw[charpos1-1] == char) != (pw[charpos2-1] == char):
             validpw2+=1            
+            entries = list(map(lambda l: correct_entry(*process_line(l)), lines[0:-1]))
