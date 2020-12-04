@@ -17,13 +17,13 @@ print(len(lines)-len(invalidpp))
 
 #%% part 2
 
-checks = [r"\bbyr:\b1[0-9]{3}|\bbyr:\b200[012]",
-          r"\biyr:\b201[0-9]|\biyr:\b2020",
-          r"\beyr:\b202[0-9]|\beyr:\b2030",
+checks = [r"\bbyr:\b19[2-9][0-9](\s|$)|\bbyr:\b200[012](\s|$)",
+          r"\biyr:\b201[0-9](\s|$)|\biyr:\b2020(\s|$)",
+          r"\beyr:\b202[0-9](\s|$)|\beyr:\b2030(\s|$)",
           r"\bhgt:\b1([5-8][0-9]|9[0-3])cm|\bhgt:\b(59|6[0-9]|7[0-6])in",
-          r"\bhcl:#\b[0-9a-f]{6}",
+          r"\bhcl:#\b[0-9a-f]{6}(\s|$)",
           r"\becl:\b(amb|blu|brn|gry|grn|hzl|oth)",
-          r"\bpid:\b[0-9]{9}"]
+          r"\bpid:\b[0-9]{9}(\s|$)"]
     
 invalidpp = []
 for passport in lines:
